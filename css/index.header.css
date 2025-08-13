@@ -1,53 +1,61 @@
 .header {
-  background-color: var(--accent-color);
-}
+    background-color: var(--secondary-background-color);
 
-.header__title,
-.header__logo {
-  font-size: 3.5rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
-}
 
-.header__menu {
-  display: flex;
-  flex-direction: column;
+    .header__nav {
+        padding: 0 15px;
+    }
 
-  .menu__item {
-    color: var(--text-color);
-    text-decoration: none;
-  }
-  .menu__item:hover {
-    text-decoration: underline;
-  }
-}
+    @media (min-width: 600px) {
+        .header__nav {
+            display: flex;
+            align-items: center; 
+        }
+    }
 
-@media (min-width: 600px) {
-  .header__nav {
-    display: flex;
-  }
+    .header__logo,
+    .header__title {
+        font-size: 3.5rem;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+    } 
 
-  .header__menu {
-    flex-direction: row;
-    flex: 1;
-    align-items: center;
-    justify-content: space-around;
-  }
-}
+   .header__menu {
+        display: flex;
+        flex-direction: column; 
 
-.header__banner {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(../img/baby-yoda.svg);
-  min-height: 500px;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
+        .menu__item {
+            text-decoration: none;
+        }
 
-.header__title {
-  color: var(--accent-color);
+        .menu__item:hover {
+            text-decoration: underline;
+        }
+   }
+
+   @media (min-width: 600px) {
+        .header__menu {
+            flex-direction: row; 
+            flex: 1;
+            justify-content: space-around;
+        }
+   }
+
+   .header__banner {
+        background-image: 
+            linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+            url(../img/baby-yoda.svg);
+        background-size: cover;
+        background-position: center; 
+        min-height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+   }
+
+   .header__title {
+        color: var(--secondary-text-color);
+   }
 }
